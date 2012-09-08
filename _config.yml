@@ -1,0 +1,12 @@
+---
+markdown: rdiscount
+pygments: true
+auto: true
+lsi: false
+title : Who Care !
+feed: /atom.xml
+author :
+  name : hexa lee
+  email : hexa.lee@gmail.com
+  twitter : hexa_lee
+description: Jekyll blogging for hexa lee learning.
