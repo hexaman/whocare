@@ -146,17 +146,17 @@ Include = /etc/pacman.d/mirrorlist
 \# pacman -S leafpad obconf epdfview gamin  
 
 编辑/home/uselinux/.bash_profile  
-    \# nano /home/uselinux/.bash_profile  
-    \# cat /home/uselinux/.bash_profile  
-     \#  
-    \# ~/.bash_profile  
-     \#  
+    # nano /home/uselinux/.bash_profile  
+    # cat /home/uselinux/.bash_profile  
+     #  
+    # ~/.bash_profile  
+     #  
 
     [[ -f ~/.bashrc ]] && . ~/.bashrc  
 
     if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then  
-      \#exec startx  
-      \# Could use xinit instead of startx  
+      #exec startx  
+      # Could use xinit instead of startx  
       xinit -- /usr/bin/X -nolisten tcp vt7  
     fi  
 
@@ -171,21 +171,21 @@ Include = /etc/pacman.d/mirrorlist
       done  
 
 编辑/home/uselinux/.xinitrc  
-    \# nano /home/uselinux/.xinitrc  
-    \# cat /home/uselinux/.xinitrc  
-    \#  
-    \#!/bin/sh  
-    \#  
-    \# ~/.xinitrc  
-    \#  
-    \# Executed by startx (run your window manager from here)  
+    # nano /home/uselinux/.xinitrc  
+    # cat /home/uselinux/.xinitrc  
+    #  
+    #!/bin/sh  
+    #  
+    # ~/.xinitrc  
+    #  
+    # Executed by startx (run your window manager from here)  
 
-    \#Locale settings  
+    #Locale settings  
     export LC_ALL=zh_CN.utf-8  
     export LANGUAGE=zh_CN.utf-8  
     export LANG=zh_CN.utf-8  
 
-    \#Start the dbus user session  
+    #Start the dbus user session  
     if [ -d /etc/X11/xinit/xinitrc.d ]; then  
       for f in /etc/X11/xinit/xinitrc.d/*; do  
         [ -x "$f" ] && . "$f"  
@@ -193,7 +193,7 @@ Include = /etc/pacman.d/mirrorlist
       unset f  
     fi  
 
-    \#using LXDE for default desktop  
+    #using LXDE for default desktop  
     exec ck-launch-session dbus-launch startlxde  
 
 至此，全部完成。重启电脑。以uselinux用户登录。
